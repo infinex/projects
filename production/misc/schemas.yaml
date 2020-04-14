@@ -1,0 +1,37 @@
+- name: complaints_users
+  size: medium
+  columns: ['complaint_id', 'complaint_text', 'was_user_disputed', 'date', 'product_id', 'issue_id']
+  schema: |
+    complaint_id integer primary key,
+    complaint_text text not null,
+    was_user_disputed varchar(3),
+    date timestamp without time zone not null,
+    product_id integer,
+    issue_id integer
+
+- name: complaints_companies
+  size: medium
+  columns: ['complaint_id', 'company', 'company_response_to_user', 'company_response_to_public', 'was_response_timely', 'date']
+  schema: |
+    complaint_id integer primary key,
+    company varchar(1000) not null,
+    company_response_to_user varchar(32),
+    company_response_to_public varchar(128),
+    was_response_timely varchar(3),
+    date timestamp without time zone not null
+
+- name: products
+  size: small
+  columns: ['product_id', 'main_product', 'sub_product']
+  schema: |
+    product_id integer primary key,
+    main_product varchar(80) not null,
+    sub_product varchar(44)
+
+- name: issues
+  size: small
+  columns: ['issue_id', 'main_issue', 'sub_issue']
+  schema: |
+    issue_id integer primary key,
+    main_issue varchar(90) not null,
+    sub_issue varchar(90)

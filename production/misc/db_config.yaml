@@ -1,0 +1,5 @@
+pg:
+    host: localhost
+    port: 54320
+    user: postgres
+    dbname: ht_db
