@@ -12,7 +12,7 @@
 # pip install -r requirements.txt
 # Remember to also add them in setup.cfg but unpinned.
 #
-numpy==1.17.3
+numpy==1.22.0
 pandas==0.25.3
 psycopg2==2.8.4
 python-dateutil==2.8.1
